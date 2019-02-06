@@ -400,6 +400,8 @@
 		595E0EDB21CAD97C00813D49 /* CookieControl.js in Resources */ = {isa = PBXBuildFile; fileRef = 595E0EDA21CAD97C00813D49 /* CookieControl.js */; };
 		595E0EE121CAEF5B00813D49 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595E0EE021CAEF5B00813D49 /* FileManagerExtension.swift */; };
 		59871C1921E4D83900316590 /* block-cookies.json in Resources */ = {isa = PBXBuildFile; fileRef = 59871C1821E4D83900316590 /* block-cookies.json */; };
+		5992CB64220B25F300B12C09 /* DomainParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5992CB5D220B24C300B12C09 /* DomainParser.framework */; };
+		5992CB67220B281D00B12C09 /* DomainParser.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5992CB5D220B24C300B12C09 /* DomainParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59A681BDFC95A19F05E07223 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A68CCB63E2A565CB03F832 /* SearchViewController.swift */; };
 		59A68D66379CFA85C4EAF00B /* TwoLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A68B1F857A8638598A63A0 /* TwoLineCell.swift */; };
 		59B6902921B684A700E9388E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6902821B684A700E9388E /* BundleExtension.swift */; };
@@ -868,6 +870,41 @@
 			remoteGlobalIDString = F84B21BD1A090F8100AAB793;
 			remoteInfo = Client;
 		};
+		5992CB5C220B24C300B12C09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CE0026720FF7AD5008E6415;
+			remoteInfo = DomainParser;
+		};
+		5992CB5E220B24C300B12C09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CE0027020FF7AD5008E6415;
+			remoteInfo = DomainParserTests;
+		};
+		5992CB60220B24C300B12C09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C75D2112100E1EB0057B32D;
+			remoteInfo = DomainParser_macOS;
+		};
+		5992CB62220B24C300B12C09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C75D2192100E1EC0057B32D;
+			remoteInfo = DomainParser_macOSTests;
+		};
+		5992CB65220B27BF00B12C09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CE0026620FF7AD5008E6415;
+			remoteInfo = DomainParser;
+		};
 		5D1DC51D20AC9AFB00905E5A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F84B21B61A090F8100AAB793 /* Project object */;
@@ -1050,6 +1087,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5992CB67220B281D00B12C09 /* DomainParser.framework in Copy Frameworks */,
 				5D1DC52920AC9AFB00905E5A /* Data.framework in Copy Frameworks */,
 				E60138661C89EB7D00DF9756 /* Storage.framework in Copy Frameworks */,
 				5DE7689A20B3456E00FF5533 /* BraveShared.framework in Copy Frameworks */,
@@ -1507,6 +1545,7 @@
 		595E0EDA21CAD97C00813D49 /* CookieControl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = CookieControl.js; sourceTree = "<group>"; };
 		595E0EE021CAEF5B00813D49 /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		59871C1821E4D83900316590 /* block-cookies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "block-cookies.json"; sourceTree = "<group>"; };
+		5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DomainParser.xcodeproj; path = ThirdParty/SwiftDomainParser/DomainParser/DomainParser.xcodeproj; sourceTree = "<group>"; };
 		59A68B1F857A8638598A63A0 /* TwoLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLineCell.swift; sourceTree = "<group>"; };
 		59A68CCB63E2A565CB03F832 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		59B6902821B684A700E9388E /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
@@ -2147,6 +2186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5992CB64220B25F300B12C09 /* DomainParser.framework in Frameworks */,
 				A1AD4BD120BF3F4D007A6EA1 /* Eureka.framework in Frameworks */,
 				E6231C051B90A472005ABB0D /* libxml2.2.tbd in Frameworks */,
 				E6231C011B90A44F005ABB0D /* libz.tbd in Frameworks */,
@@ -2527,6 +2567,7 @@
 		28CE83EF1A1D246900576538 /* Third-Party Source */ = {
 			isa = PBXGroup;
 			children = (
+				5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */,
 				A1FEEE1F20BF28D900298DA2 /* Then.swift */,
 				E66C5B451BDA81050051AA93 /* Apple */,
 				E659A6091EB7C1D300D7A6AD /* BuddyBuild */,
@@ -2557,7 +2598,7 @@
 				C817B34C1FC609500086018E /* UIScrollViewSwizzled.swift */,
 				A1AD4BE020C082EF007A6EA1 /* UIGestureRecognizerExtensions.swift */,
 				A1AD4BE220C0861D007A6EA1 /* UIBarButtonItemExtensions.swift */,
-                595E0EE021CAEF5B00813D49 /* FileManagerExtension.swift */,
+				595E0EE021CAEF5B00813D49 /* FileManagerExtension.swift */,
 			);
 			indentWidth = 4;
 			name = Extensions;
@@ -3083,6 +3124,17 @@
 				0A43293821B1C8120041625B /* NetworkDataFileLoader.swift */,
 			);
 			path = ShieldStats;
+			sourceTree = "<group>";
+		};
+		5992CB56220B24C300B12C09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5992CB5D220B24C300B12C09 /* DomainParser.framework */,
+				5992CB5F220B24C300B12C09 /* DomainParserTests.xctest */,
+				5992CB61220B24C300B12C09 /* DomainParser.framework */,
+				5992CB63220B24C300B12C09 /* DomainParser_macOSTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5D1DC51420AC9AFA00905E5A /* Data */ = {
@@ -4507,6 +4559,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5992CB66220B27BF00B12C09 /* PBXTargetDependency */,
 				288A2D9C1AB8B3260023ABC3 /* PBXTargetDependency */,
 				2FCAE2301ABB51F800877008 /* PBXTargetDependency */,
 				5D1DC52720AC9AFB00905E5A /* PBXTargetDependency */,
@@ -4664,6 +4717,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 5992CB56220B24C300B12C09 /* Products */;
+					ProjectRef = 5992CB55220B24C300B12C09 /* DomainParser.xcodeproj */;
+				},
+				{
 					ProductGroup = D30EBB5B1C75503800105AE9 /* Products */;
 					ProjectRef = D30EBB5A1C75503800105AE9 /* KIF.xcodeproj */;
 				},
@@ -4701,6 +4758,34 @@
 			fileType = archive.ar;
 			path = libsqlcipher.a;
 			remoteRef = 0B742CCB1B32491400EE9264 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5992CB5D220B24C300B12C09 /* DomainParser.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DomainParser.framework;
+			remoteRef = 5992CB5C220B24C300B12C09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5992CB5F220B24C300B12C09 /* DomainParserTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DomainParserTests.xctest;
+			remoteRef = 5992CB5E220B24C300B12C09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5992CB61220B24C300B12C09 /* DomainParser.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DomainParser.framework;
+			remoteRef = 5992CB60220B24C300B12C09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5992CB63220B24C300B12C09 /* DomainParser_macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DomainParser_macOSTests.xctest;
+			remoteRef = 5992CB62220B24C300B12C09 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		D30EBB641C75503800105AE9 /* libKIF.a */ = {
@@ -5765,6 +5850,11 @@
 			isa = PBXTargetDependency;
 			target = F84B21BD1A090F8100AAB793 /* Client */;
 			targetProxy = 3BFE4B0C1D342FB900DDF53F /* PBXContainerItemProxy */;
+		};
+		5992CB66220B27BF00B12C09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DomainParser;
+			targetProxy = 5992CB65220B27BF00B12C09 /* PBXContainerItemProxy */;
 		};
 		5D1DC51E20AC9AFB00905E5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
