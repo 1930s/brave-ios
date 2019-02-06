@@ -6,6 +6,7 @@
 //  Copyright © 2018 Dashlane. All rights reserved.
 //
 
+// Run this script from terminal to update the PSL data file in Resource folder
 import Foundation
 
 enum ErrorType: Error {

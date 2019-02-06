@@ -7,7 +7,6 @@ import Shared
 import SnapKit
 import XCGLogger
 import BraveShared
-import DomainParser
 
 private let log = Logger.browserLogger
 
@@ -110,6 +109,14 @@ class TabLocationView: UIView {
             }
         }
     }
+    
+    lazy var parser: DomainParser? = {
+        do {
+            return try DomainParser()
+        } catch {
+            return nil
+        }
+    }()
 
     lazy var placeholder: NSAttributedString = {
         return NSAttributedString(string: Strings.TabToolbarSearchAddressPlaceholderText, attributes: [NSAttributedStringKey.foregroundColor: UIColor.Photon.Grey40])
@@ -287,9 +294,9 @@ class TabLocationView: UIView {
 
     fileprivate func updateTextWithURL() {
         if let host = url?.host, AppConstants.MOZ_PUNYCODE {
-            urlTextField.text = url?.absoluteString.replacingOccurrences(of: host, with: host.asciiHostToUTF8()).etldValue() ?? ""
+            urlTextField.text = url?.absoluteString.replacingOccurrences(of: host, with: host.asciiHostToUTF8()).etldValue(parser: parser) ?? ""
         } else {
-            urlTextField.text = url?.absoluteString.etldValue() ?? ""
+            urlTextField.text = url?.absoluteString.etldValue(parser: parser) ?? ""
         }
     }
 }
@@ -442,15 +449,12 @@ private class DisplayTextField: UITextField {
 }
 
 extension String {
-    func etldValue() -> String {
-        do {
-            let domainParser = try DomainParser()
-            
-            if let url: URL = URL(string: self.trimmingCharacters(in: CharacterSet(charactersIn: "/"))), let host: String = url.host {
-                return domainParser.parse(host: host)?.domain ?? self
-            }
-        } catch {
-            //Log error
+    func etldValue(parser: DomainParser?) -> String {
+        guard parser != nil else {
+            return self
+        }
+        if let url: URL = URL(string: self.trimmingCharacters(in: CharacterSet(charactersIn: "/"))), let host: String = url.host {
+            return parser?.parse(host: host)?.domain ?? self
         }
         return self
     }

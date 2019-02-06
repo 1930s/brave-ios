@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DomainParser
+@testable import Client
 
 class DomainParserTests: XCTestCase {
 
